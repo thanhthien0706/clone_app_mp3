@@ -1,0 +1,41 @@
+@import "./variables";
+
+
+@mixin transform($val) {
+    transform: translate(0, $val);
+    -webkit-transform: translate(0, $val);
+    -moz-transform: translate(0, $val);
+    -ms-transform: translate(0, $val);
+    -o-transform: translate(0, $val);
+}
+
+@mixin borderRadius($val) {
+    border-radius: $val;
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+}
+
+@function pxEm($pxsize) {
+    @return ($pxsize/$base-font-size)+em;
+}
+
+@mixin fontSize($val) {
+    font-size: pxEm($val)
+}
+
+@mixin gridFlexRowBase {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin gridFlexColumnBase {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin filter($type, $value) {
+    -webkit-filter: $type + '('+ $value + ')';
+    filter: $type + '('+ $value + ')';
+}

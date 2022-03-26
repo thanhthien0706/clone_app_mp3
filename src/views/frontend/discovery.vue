@@ -9,7 +9,7 @@ import DefaultLayout from "@/layouts/frontend/default_layout.vue";
 
 export default {
   name: "DiscoveryScreen",
-  components: [DefaultLayout],
+  components: { DefaultLayout },
 };
 </script>
 

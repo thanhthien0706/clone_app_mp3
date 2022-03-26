@@ -1,0 +1,47 @@
+@import "../../../base/variables";
+
+.defaultLayout {
+    &__inner {
+        height: 100vh;
+        background-color: $layout-bg;
+        @include gridFlexRowBase;
+
+        .boxLeft {
+            width: 240px;
+            height: 100%;
+            z-index: 100;
+            position: relative;
+            background-color: $sidebar-bg;
+
+            .l__menuBox {
+                &__logo {
+                    padding: 15px 0;
+
+                    &__link {
+                        display: inline-block;
+                        outline: none;
+
+                        &:hover {
+                            .logo {
+                                @include filter(brightness, .9);
+                            }
+                        }
+
+                        .logo {
+                            width: 120px;
+                            height: 40px;
+                            display: inline-block;
+                            background: $img-logo 50%/contain no-repeat;
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .boxRight {
+            width: calc(100% - 240px);
+        }
+    }
+}
